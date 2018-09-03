@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: presentation.aux
+The style file: apalike.bst
+Database file #1: presentation.bib
+Repeated entry---line 294 of file presentation.bib
+ : @inproceedings{xingjian2015convolutional
+ :                                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 357 of file presentation.bib
+ : @article{simonyan2014very
+ :                          ,
+I'm skipping whatever remains of this entry
+You've used 7 entries,
+            1935 wiz_defined-function locations,
+            513 strings with 5363 characters,
+and the built_in function-call counts, 3564 in all, are:
+= -- 357
+> -- 156
+< -- 5
++ -- 58
+- -- 54
+* -- 279
+:= -- 576
+add.period$ -- 23
+call.type$ -- 7
+change.case$ -- 62
+chr.to.int$ -- 7
+cite$ -- 7
+duplicate$ -- 150
+empty$ -- 242
+format.name$ -- 63
+if$ -- 735
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 38
+num.names$ -- 21
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 62
+quote$ -- 0
+skip$ -- 119
+stack$ -- 0
+substring$ -- 249
+swap$ -- 45
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 42
+warning$ -- 0
+while$ -- 28
+width$ -- 0
+write$ -- 93
+(There were 2 error messages)

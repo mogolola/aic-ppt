@@ -1,0 +1,49 @@
+\begin{thebibliography}{}
+
+\bibitem[Bai et~al., 2018]{bai2018empirical}
+Bai, S., Kolter, J.~Z., and Koltun, V. (2018).
+\newblock An empirical evaluation of generic convolutional and recurrent
+  networks for sequence modeling.
+\newblock {\em arXiv preprint arXiv:1803.01271}.
+
+\bibitem[DeMaria et~al., 2005]{demaria2005further}
+DeMaria, M., Mainelli, M., Shay, L.~K., Knaff, J.~A., and Kaplan, J. (2005).
+\newblock Further improvements to the statistical hurricane intensity
+  prediction scheme (ships).
+\newblock {\em Weather and Forecasting}, 20(4):531--543.
+
+\bibitem[He et~al., 2015]{he2015delving}
+He, K., Zhang, X., Ren, S., and Sun, J. (2015).
+\newblock Delving deep into rectifiers: Surpassing human-level performance on
+  imagenet classification.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 1026--1034.
+
+\bibitem[Liberge et~al., 2011]{liberge2011prevision}
+Liberge, S.~M., Ba, S., Lenca, P., and Fablet, R. (2011).
+\newblock Pr{\'e}vision de trajectoires de cyclones {\`a} l'aide de for{\^e}ts
+  al{\'e}atoires avec arbres de r{\'e}gression.
+\newblock In {\em Conf{\'e}rence internationale francophone sur l'extraction et
+  la gestion des connaissances}, pages 623--634. Hermann.
+
+\bibitem[Moradi~Kordmahalleh et~al., 2016]{moradi2016sparse}
+Moradi~Kordmahalleh, M., Gorji~Sefidmazgi, M., and Homaifar, A. (2016).
+\newblock A sparse recurrent neural network for trajectory prediction of
+  atlantic hurricanes.
+\newblock In {\em Proceedings of the Genetic and Evolutionary Computation
+  Conference 2016}, pages 957--964. ACM.
+
+\bibitem[Simonyan and Zisserman, 2014]{simonyan2014very}
+Simonyan, K. and Zisserman, A. (2014).
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em arXiv preprint arXiv:1409.1556}.
+
+\bibitem[Xingjian et~al., 2015]{xingjian2015convolutional}
+Xingjian, S., Chen, Z., Wang, H., Yeung, D.-Y., Wong, W.-K., and Woo, W.-c.
+  (2015).
+\newblock Convolutional lstm network: A machine learning approach for
+  precipitation nowcasting.
+\newblock In {\em Advances in neural information processing systems}, pages
+  802--810.
+
+\end{thebibliography}

@@ -1,0 +1,16 @@
+\beamer@sectionintoc {1}{Background}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Hurricane Track Forecast}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Hurricane Track Forecasting Models for Meteorologists }{6}{0}{1}
+\beamer@sectionintoc {2}{Preliminaries}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Problem Setting}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Previous Works}{9}{0}{2}
+\beamer@sectionintoc {3}{Method}{10}{0}{3}
+\beamer@subsectionintoc {3}{1}{Data Description}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Feature Selection}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{The proposed method}{14}{0}{3}
+\beamer@subsectionintoc {3}{4}{Fusion Network Training Framework}{19}{0}{3}
+\beamer@sectionintoc {4}{Experiments}{24}{0}{4}
+\beamer@subsectionintoc {4}{1}{Selecting Network Configurations}{25}{0}{4}
+\beamer@subsectionintoc {4}{2}{Comparison with the Existing Forecasting Models}{30}{0}{4}
+\beamer@sectionintoc {5}{Discussion}{36}{0}{5}
+\beamer@sectionintoc {6}{Discussion}{37}{0}{6}
