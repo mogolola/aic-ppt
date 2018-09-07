@@ -1,11 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[Bai et~al., 2018]{bai2018empirical}
-Bai, S., Kolter, J.~Z., and Koltun, V. (2018).
-\newblock An empirical evaluation of generic convolutional and recurrent
-  networks for sequence modeling.
-\newblock {\em arXiv preprint arXiv:1803.01271}.
-
 \bibitem[DeMaria et~al., 2005]{demaria2005further}
 DeMaria, M., Mainelli, M., Shay, L.~K., Knaff, J.~A., and Kaplan, J. (2005).
 \newblock Further improvements to the statistical hurricane intensity
@@ -18,6 +12,13 @@ He, K., Zhang, X., Ren, S., and Sun, J. (2015).
   imagenet classification.
 \newblock In {\em Proceedings of the IEEE international conference on computer
   vision}, pages 1026--1034.
+
+\bibitem[Lea et~al., 2016]{lea2016temporal}
+Lea, C., Vidal, R., Reiter, A., and Hager, G.~D. (2016).
+\newblock Temporal convolutional networks: A unified approach to action
+  segmentation.
+\newblock In {\em European Conference on Computer Vision}, pages 47--54.
+  Springer.
 
 \bibitem[Liberge et~al., 2011]{liberge2011prevision}
 Liberge, S.~M., Ba, S., Lenca, P., and Fablet, R. (2011).
@@ -33,8 +34,14 @@ Moradi~Kordmahalleh, M., Gorji~Sefidmazgi, M., and Homaifar, A. (2016).
 \newblock In {\em Proceedings of the Genetic and Evolutionary Computation
   Conference 2016}, pages 957--964. ACM.
 
-\bibitem[Simonyan and Zisserman, 2014]{simonyan2014very}
-Simonyan, K. and Zisserman, A. (2014).
+\bibitem[Simonyan and Zisserman, 2014a]{simonyan2014two}
+Simonyan, K. and Zisserman, A. (2014a).
+\newblock Two-stream convolutional networks for action recognition in videos.
+\newblock In {\em Advances in neural information processing systems}, pages
+  568--576.
+
+\bibitem[Simonyan and Zisserman, 2014b]{simonyan2014very}
+Simonyan, K. and Zisserman, A. (2014b).
 \newblock Very deep convolutional networks for large-scale image recognition.
 \newblock {\em arXiv preprint arXiv:1409.1556}.
 

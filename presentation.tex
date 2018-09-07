@@ -7,7 +7,7 @@
 \makeatother
  
 %Information to be included in the title page:
-\title[About Beamer] %optional
+\title[DL for hurricane track forecast ] %optional
 {Fused Deep Learning For Hurricane Track Forecast From Reanalysis Data}
 
 
@@ -22,7 +22,7 @@
 	\\
 	Guillaume Charpiat 
 	\\
-	Sophie Giffard-Roison
+	Sophie Giffard-Roisin
 }
 \date{\today} % Date, can be changed to a custom date
  
@@ -58,16 +58,6 @@
 \item Can be very unpredictable.
 \item \textbf{Tracks} and \textbf{Intensity} : Two main goals of the forecast
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Hurricane}
-\begin{itemize}
-	\item How hurricane is formed \\
-\end{itemize}
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{figs/hurricane_section.png}
-\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -120,10 +110,12 @@
 \begin{frame}
 \frametitle{Previous Works}
 \begin{itemize}
-\item A large family of previous methods use spatio-temporal features
+\item A large family of previous methods used spatio-temporal features
 \begin{itemize}
+	\item Two-stream Convolutional Network
+	\cite{simonyan2014two}
 	\item Convolutional LSTM \cite{xingjian2015convolutional}
-	\item Temporal Convolutional Networks \cite{bai2018empirical}
+	\item Temporal Convolutional Networks \cite{lea2016temporal}
 \end{itemize}
 \item Only two preliminary studies have tackled the hurricane forecast tracking using machine learning
 \begin{itemize}
@@ -140,41 +132,55 @@
  \tableofcontents[currentsection] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
 \subsection{Data Description}
+
+
+
 \begin{frame}
-\frametitle{Data}
+\frametitle{Data sources}
 \begin{itemize}
 	\item  \textbf{Storm track data}: composed of tropical/extra-tropical storm tracks since 1979 extracted from the NOAA database IBTrACS. \\
+	\begin{figure}
+		\includegraphics[width=0.7\linewidth, height=0.5\textheight]{figs/all_storms.png}
+		\label{fig: storm_tracks}
+		\caption{Database: tropical/extra-tropical storm tracks since 1979. Dots = initial position, colors = maximal storm strength according to the Saffir-Simpson scale.}
+	\end{figure}
 \end{itemize}
-\begin{figure}
-	\includegraphics[width=0.7\linewidth, height=0.5\textheight]{figs/all_storms.png}
-	\label{fig: storm_tracks}
-	\caption{Database: tropical/extra-tropical storm tracks since 1979. Dots = initial position, colors = maximal storm strength according to the Saffir-Simpson scale.}
-\end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Data}
+\frametitle{Data sources}
 \begin{itemize}
-	\item  \textbf{Reanalysis}: dynamically consistent estimates of the climate atmospheric fields or state. Created via data assimilation scheme and model(s) which take all available observations (radiosonde, satellite, buoy, aircraft and ship reports ...) as inputs every 6 hours.
-	\item ERA-Interim: the latest global atmospheric reanalysis produced by The European Centre for Medium-Range Weather Forecasts (ECMWF). 
+	\item \textbf{Reanalysis:} the latest global atmospheric reanalysis ERA-Interim produced by The European Centre for Medium-Range Weather Forecasts (ECMWF). 
 	\begin{itemize}
+		\item global atmospheric fields : u-wind, v-wind, pressure, temperature, humidity, vorticity ... every 6 hours
 		\item spectral resolution: about 80km on 60 vertical levels from the surface up to 0.1 hPa
-		\item atmospheric fields: u-wind, v-wind, pressure, temporature, humiity, vorticity ......
 	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=0.7\linewidth, height=0.4\textheight]{figs/Reanalysis-Data-Wind-Speed.png}
+		\caption{Reanalysis wind fields (Source: from website)}
+	\end{figure}
 \end{itemize}
 \end{frame}
 
-\subsection{Feature Selection}
+
 \begin{frame}
-\frametitle{Feature Selection}
+\frametitle{Input features}
 \begin{itemize}
-	\item \textbf{The wind fields.} u-wind and v-wind fields on a 25x25 degree grid centered on the current storm location, at three atmospheric pressure levels (700 hPa, 500 hPa, and 225 hPa). 
-	\item \textbf{The pressure fields.} geopotential height fields on a 25x25 degree grid centered on the current storm location, at three atmospheric pressure levels (700 hPa, 500 hPa, and 225 hPa)
-	\item \textbf{Displacement in history.} 
-	\item \textbf{Other hand-crafted features:} current lat. \& lon.,  windspeed, Jday predictor(Gaussian function of "Julian day of storm init - peak day of the hurricane season"\cite{demaria2005further}), and current distance to land. 
+	\item \textbf{The wind fields.} u-wind and v-wind fields on a 25x25 degree grid centered on the current storm location, at three atmospheric pressure levels (700 hPa, 500 hPa, and 225 hPa),  from consecutive previous - current time point \textbf{(3D tensor)}
+	\item \textbf{The pressure fields.} geopotential height fields on a 25x25 degree grid centered on the current storm location, at three atmospheric pressure levels (700 hPa, 500 hPa, and 225 hPa), from consecutive previous - current time point \textbf{(3D tensor)}
 	
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Input features}
+\begin{itemize}
+\item \textbf{Storm track in history.}  The past 6-hourly displacement in lat. and lon. \textbf{(1D tensor)} 
+\item \textbf{Other hand-crafted features:} current lat. and lon.,  windspeed, Jday predictor(Gaussian function of "Julian day of storm init - peak day of the hurricane season"\cite{demaria2005further}), and current distance to land.  \textbf{(1D tensor)} 
+
+\end{itemize}
+\end{frame}
+
 
 \subsection{The proposed method}
 \begin{frame}
@@ -183,7 +189,7 @@
 	\item  Three-stream fusion network \\
 \end{itemize}
 \begin{figure}
-	\includegraphics[width=0.8\linewidth]{figs/fusion_network.pdf}
+	\includegraphics[width=1.0\linewidth]{figs/fusion_network.pdf}
 \end{figure}
 \end{frame}
 
@@ -197,7 +203,6 @@
 		\begin{itemize}
 			\item pretty standard (popular) CNN architecture, like VGG Net \cite{simonyan2014very}
 			\item trying from shallow to deep
-			\item \textbf{Details:} ReLU, batch norm, adam, batch size=$32$, L2 $coeff.$ = $0.01$, initial learning rate = $0.001$, $He$ initialization \cite{he2015delving}, everything fine tuned... \textbf{No magic!}
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
@@ -252,71 +257,91 @@
 			\flushleft
 			\includegraphics[width=0.65\linewidth]{figs/fusion_details.pdf} \\
 		\end{figure}
+		\item connections between different streams in fusion layers are added
 		\item two-phase optimization:
 			\begin{itemize}
 				\item first phase: optimize weights only in fusion layers
-				\item seconc phase: optimize weights in all layerts
+				\item second phase: optimize weights in all layers
 			\end{itemize}
 	\end{itemize}
 \end{itemize}
 \end{frame}
 
-\subsection{Fusion Network Training Framework}
-\begin{frame}
-\frametitle{Outline} % Table of contents slide, comment this block out to remove it
-\tableofcontents[currentsubsection] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
-\end{frame}
 \begin{frame}
 \frametitle{Input preprocessing}
 \begin{itemize}
 	\item  the entire dataset into train (60\%) / validation (20\%) / test (20\%)
 	\item separate all the storms into the three bins to avoid data leakage
-	\item input data standardized by subtracting mean value then dividing by the standard variation of each layer, computed on the training set, from each feature
+	\item standardization
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Training}
-Let $D = \{(x_w^1, x_p^1, x_{0d}^1, loc_t^1, loc_{t+\delta t}^1), ..., (x_w^n, x_p^n, x_{0d}^n, loc_t^n, loc_{t+\delta t}^n)\}$ be the labeled data; with $x_w^i$, $x_p^i$, $x_{0d}^i$ denoting wind fields, pressure fields, 0d features respectively and $loc_t^i$, $loc_{t+\delta t}^i$ corresponding to the ground truth location at current time and after $\delta t$ time. $\delta t$ can be 6 hours, 12 hours, 18 hours, 24 hours... depending on the specific forecasting task. 
-\end{frame}
-
-\begin{frame}
-\frametitle{Training}
-	\begin{itemize}
-		\item  Stage \Rmnum{1}: Train the stream networks \\ let $F_{wind}$ be the mapping function of Wind CNN, the network parameters are marked as $\theta_w$, $F_{transform}$ is the transformation function from differences in latitude and longitude to distance. The training of Wind CNN is carried out by optimizing on the loss (MSE) between the forecast storm location and the corresponding ground truth location 
-		\begin{equation}
-		\label{eq}
-		L(\theta_w) = \frac{1}{n}\sum_{i=1}^{n} \left \| {F_{transform}((F_{wind}(x_w^i; \theta_w)} + loc^i_{t} ) - loc^i_{t+\delta t} ) \right \| ^2
-		\end{equation}
-		Where n is the total number of instances. Training the Pressure CNN and Past tracks + meta NN can be performed analogously.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Training}
+\frametitle{Loss function}
 \begin{itemize}
-	\item  two-phase manner
+	\item Stage \Rmnum{1}: train independently three stream networks
+	\begin{equation*}
+	\label{eq}
+	L(\theta_w) = \frac{1}{n}\sum_{i=1}^{n} \left \| {M_{transform}((F_{wind}(x_w^i; \theta_w)} + loc^i_{t} ) - loc^i_{t+\delta t} ) \right \| ^2
+	\end{equation*}
 	\begin{itemize}
-		\item  Let $F_{f}$ be the function of fusion network, $\theta_{f}$, $\theta_{s}$ be parameters of fusion layers and of stream layers. In the first phase, optimize only the weights in the fusion layers (keeping the weights of the stream layers intact). The first phase's loss function would be:
-		
-		\begin{equation}
-		\label{eq_fusion_1}
-		L(\theta_{f}) = \frac{1}{n}\sum_{i=1}^{n} \left \| {F_{transform}((F_{f}(x_w^i, x_p^i, x_{0d}^i; \theta_{f})} + loc^i_{t} ) - loc^i_{t+\delta t} ) \right \| ^2
-		\end{equation}
-		\item In the second phase, let the weights in the whole network be equally optimized. The second phase's loss function would be:
-		\begin{equation}
-		\label{eq_fusion_2}
-		L(\theta_{f}, \theta_{s}) = \frac{1}{n}\sum_{i=1}^{n} \left \| {F_{transform}((F_{f}(x_w^i, x_p^i, x_{0d}^i; \theta_{f}, \theta_{s})} + loc^i_{t} ) - loc^i_{t+\delta t} ) \right \| ^2
-		\end{equation}
-		
+		\item above showed Wind CNN loss function, analogical for other two stream networks.
+		\item $\delta t$: the prediction interval
+		\item $(x_w^n, x_p^n, x_{1d}^n, loc_t^n, loc_{t+\delta t}^n)\}$ : labeled data
+		\item $\theta_{w}$: Wind CNN parameters
+		\item $F_{wind}$: Wind CNN (input: wind fields $\mapsto$ output: expected displacement)
+		\item $M_{transform}$: transformation matrix from differences in latitude and longitude to distance in kilometers
 	\end{itemize}
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Loss function}
+\begin{itemize}
+	\item Stage \Rmnum{2}: train the fusion network (2 phases)
+	\begin{equation*}
+	\label{eq_fusion_2}
+	L(\theta_{f}, \theta_{s}) = \frac{1}{n}\sum_{i=1}^{n} \left \| {M_{transform}((F_{f}(x_w^i, x_p^i, x_{1d}^i; \theta_{f}, \theta_{s})} + loc^i_{t} ) - loc^i_{t+\delta t} ) \right \| ^2
+	\end{equation*}
+	\begin{itemize}
+		\item $\theta_{f}$: parameters of fusion layers 
+		\item $\theta_{s}$: parameters of stream layers
+		\item $F_{f}$: Fusion network (input: wind fields + pressure fields + 1d features (past tracks + meta) $\mapsto$ output: expected displacement)
+	\end{itemize}
+	\item first phase:  optimize only $\theta_{f}$
+	
+	
+	\item second phase: optimize on $\theta_{f}$ and $\theta_{s}$
+
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Algorithmic Details}
+\textbf{Algorithmic details:} ReLU, batch norm, adam, batch size=$256$, L2 $coeff.$ = $0.01$, fine-tuned initial learning rate, $He$ initialization \cite{he2015delving}... \textbf{No magic!}
+\end{frame}
+
+
+
+
+
+
+
 
 \section{Experiments}
 \begin{frame}
 \frametitle{Outline} % Table of contents slide, comment this block out to remove it
-\tableofcontents[currentsubsection] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\tableofcontents[currentsection] % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+\begin{frame}
+\frametitle{The Stream Networks}
+\begin{figure}
+	\includegraphics[width=0.8\linewidth]{figs/wind-cnn.png}
+\end{figure}
 \end{frame}
 
 \subsection{Selecting Network Configurations}
@@ -327,7 +352,7 @@ Let $D = \{(x_w^1, x_p^1, x_{0d}^1, loc_t^1, loc_{t+\delta t}^1), ..., (x_w^n, x
 	\item  Four candidates' network configurations for Wind CNN\\
 	\begin{itemize}
 		\item followed the same generic design
-		\item from shalow to deep
+		\item from shallow to deep
 	\end{itemize}
 \end{itemize}
 \begin{figure}
@@ -339,7 +364,7 @@ Let $D = \{(x_w^1, x_p^1, x_{0d}^1, loc_t^1, loc_{t+\delta t}^1), ..., (x_w^n, x
 \frametitle{Experiments}
 \framesubtitle{Selecting Stream Network Configuration}
 \begin{itemize}
-	\item  Evaluation results on 24 hours of storm track prediction on the validation set\\
+	\item  Evaluation results on 24 hours of storm track prediction on the validation set (\textbf{A,B,C,D from shallow to deep})\\
 
 \begin{table}[]
 	\centering
@@ -359,14 +384,25 @@ Let $D = \{(x_w^1, x_p^1, x_{0d}^1, loc_t^1, loc_{t+\delta t}^1), ..., (x_w^n, x
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Experiments}
+\framesubtitle{Selecting Fusion Network Configuration}
+\begin{itemize}
+	\item  Three-stream fusion network \\
+\end{itemize}
+\begin{figure}
+	\includegraphics[width=1.0\linewidth]{figs/fusion_network.pdf}
+\end{figure}
+\end{frame}
 
 \begin{frame}
 \frametitle{Experiments}
 \framesubtitle{Selecting Fusion Network Configuration}
-Two senarios:
+Three scenarios:
 \begin{itemize}
 	\item  how many layers should be fused?
 	\item  Does fusing three streams outperforms fusing two streams or using single stream?
+	\item  Do we need to pretrain the 3 stream  networks before training the fusion networks?
 \end{itemize}
 \end{frame}
 
@@ -376,20 +412,19 @@ Two senarios:
 \begin{itemize}
 	\item  how many layers should be fused?
 	\begin{itemize}
-		\item Comparison of fusion networks that fuse different number of layers on 24 hours storm track prediction on validation set.
+		\item Comparison of fusion networks that fuse different number of layers on 24 hours storm track prediction on \textbf{validation set}.
 		
 	\end{itemize}
 	\begin{figure}
 		\includegraphics[width=0.95\linewidth]{figs/fusion_1.png} \\
 	\end{figure}
-	\item  Does fusing three streams outperforms fusing two streams or using single stream?
+	\item  Does fusing the three streams outperforms fusing two streams or using single stream?
 	\begin{itemize}
 		\item Comparison between the fusion network fusing all three streams with networks fusing two streams and single stream networks.
+		\item compare also with naive fusion (no pretrain)
+		\item Result shown in the next slide
 		
 	\end{itemize}
-	\begin{figure}
-		\includegraphics[width=0.8\linewidth]{figs/fusion_2.png} \\
-	\end{figure}
 \end{itemize}
 \end{frame}
 
@@ -397,9 +432,12 @@ Two senarios:
 \frametitle{Experiments}
 \framesubtitle{Selecting Fusion Network Configuration}
 \begin{figure}
-	\caption{24h-forecast results on the test set (storms coming from all oceanic basins), in distance between predicted and real location.}
-	\includegraphics[width=0.75\linewidth]{figs/MAE.pdf} \\
+	\caption{24h-forecast results, in distance between predicted and real location.}
+	\includegraphics[width=0.68\linewidth]{figs/MAE.PNG} \\
 \end{figure}
+
+\small{naive fusion's forecasting error in distance: \textbf{142.63 km}, worse than best single stream alone! }
+
 
 \end{frame}
 
@@ -414,8 +452,8 @@ Two senarios:
 \frametitle{Experiment} 
 \framesubtitle{Comparison with the Existing Forecasting Models}
 \begin{itemize}
-	\item \textbf{Baselines:} A commenly used statisticall model for benchmarking:  Best Track Decay (BCD5)
-	\item Also compare with: Official NHC forecast (OCFL). With increased computational power, the performance of OFCL is constantly improving
+	\item Compare with: A standard statistical model (BCD5)
+	\item Also compare with: Official NHC forecast (OCFL).Ensemble methods, imporved over years
 	
 \end{itemize}
 \end{frame}
@@ -427,7 +465,7 @@ Two senarios:
 Quantitative: 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{figs/ATL_comparison_of_models_errors_per_year.pdf}\\
-	\caption{The yearly average 24-hours storm track forecasting errors (km) and standard deviation on the test set in Atlantic for our fusion network forecasts(blue), the BCD5 (green) and the OFCL (red), 1989-2016.}
+	\caption{The yearly average 24-hours storm track forecasting errors (km) and standard deviation on the test set in \textbf{Atlantic} for our fusion network forecasts(blue), the BCD5 (green) and the OFCL (red), 1989-2016.}
 \end{figure}
 \end{frame}
 
@@ -437,7 +475,7 @@ Quantitative:
 Quantitative: 
 \begin{figure}
 	\includegraphics[width=1.0\linewidth]{figs/EPAC_comparison_of_models_errors_per_year.pdf}\\
-	\caption{The yearly average 24-hours storm track forecasting errors (km) and standard deviation on the test set in East Pacific for our fusion network forecasts (blue), the BCD5 (green) and the OFCL (red), 1989-2016.}
+	\caption{The yearly average 24-hours storm track forecasting errors (km) and standard deviation on the test set in \textbf{East Pacific} for our fusion network forecasts (blue), the BCD5 (green) and the OFCL (red), 1989-2016.}
 \end{figure}
 \end{frame}
 
@@ -465,8 +503,16 @@ Qualitative:
 \end{figure}
 \end{frame}
 
+\begin{frame}
+\frametitle{Experiments}
+\framesubtitle{Comparison with the Existing Forecasting Models}
+Qualitative: 
 
-
+\begin{figure}
+	\includegraphics[height=0.6\textheight, width=0.4\linewidth]{figs/6h_track.png}\\
+	\caption{\small{Example of 6h-forecasts on one storm track. The baseline prediction is equal to the last 6h-displacement (going straight).}}
+\end{figure}
+\end{frame}
 
 \section{Discussion}
 \begin{frame}
@@ -475,13 +521,12 @@ Qualitative:
 
 \begin{itemize}
 	\item  Proposed a promising deep learning framework for storm track forecasting
-	\item  Coupled different types of data (wind fields, pressure fields, past tracks and other handcrafted data) into our fusion model
+	\item  Designed a fusion network consists of a three-stream convolutional neural network that can learn to fuse information from both atmopheric fields and history track
 	\item  our model outperforms the BCD5 model
 	\item  our model can help to enhance the official forecast, even its forecast errors are larger than the OFCL model.
 \end{itemize} 
 \end{frame}
 
-\section{Discussion}
 \begin{frame}
 \frametitle{Discussion}
 \large{What's next?}
@@ -495,6 +540,11 @@ Qualitative:
 
 \begin{frame}
 \Huge{\centerline{THANK YOU}}
+\small
+\begin{itemize}
+	\item work published in Climate Informatics Workshop Proceedings 2018, Sep 2018, Boulder, United States: 'Fused Deep Learning For Hurricane Track Forecast From Reanalysis Data' (same title)
+	\item \textbf{advertisement:} Data challenge (Hackson) of Saclay Datascience Center about hurricane intensity forecast is going to be hold in Boulder, United States, Oct.
+\end{itemize}
 \end{frame}
 
 

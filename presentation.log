@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.10)  3 SEP 2018 06:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.10)  6 SEP 2018 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -849,53 +849,53 @@ entation.toc) [2
 ] [3
 
 ]
-<figs/hurricane_section.png, id=209, 257.16075pt x 118.64325pt>
-File: figs/hurricane_section.png Graphic file (type png)
-<use figs/hurricane_section.png>
-Package pdftex.def Info: figs/hurricane_section.png  used on input line 71.
-(pdftex.def)             Requested size: 273.83728pt x 126.33873pt.
- [4
-
- <./figs/hurricane_section.png>]
-<figs/Katrina.png, id=237, 642.4pt x 397.485pt>
+<figs/Katrina.png, id=190, 642.4pt x 397.485pt>
 File: figs/Katrina.png Graphic file (type png)
 <use figs/Katrina.png>
-Package pdftex.def Info: figs/Katrina.png  used on input line 82.
+Package pdftex.def Info: figs/Katrina.png  used on input line 72.
 (pdftex.def)             Requested size: 205.37616pt x 156.29219pt.
-<figs/saffir-simpson.png, id=238, 264.99pt x 279.0425pt>
+<figs/saffir-simpson.png, id=192, 264.99pt x 279.0425pt>
 File: figs/saffir-simpson.png Graphic file (type png)
 <use figs/saffir-simpson.png>
-Package pdftex.def Info: figs/saffir-simpson.png  used on input line 82.
+Package pdftex.def Info: figs/saffir-simpson.png  used on input line 72.
 (pdftex.def)             Requested size: 102.69064pt x 104.18935pt.
- [5
+ [4
 
- <./figs/Katrina.png> <./figs/saffir-simpson.png>]
-[6
+ <./figs/Katrina.png> <./figs/saffir-simpson.png>] [5
 
-] (./presentation.toc) [7
+] (./presentation.toc) [6
 
 ]
-<figs/storm_shema.png, id=334, 487.06969pt x 249.18094pt>
+<figs/storm_shema.png, id=284, 487.06969pt x 249.18094pt>
 File: figs/storm_shema.png Graphic file (type png)
 <use figs/storm_shema.png>
-Package pdftex.def Info: figs/storm_shema.png  used on input line 116.
+Package pdftex.def Info: figs/storm_shema.png  used on input line 106.
 (pdftex.def)             Requested size: 273.83728pt x 140.09167pt.
- [8
+ [7
 
- <./figs/storm_shema.png>] [9
+ <./figs/storm_shema.png>] [8
+
+] (./presentation.toc) [9
 
 ]
-(./presentation.toc) [10
-
-]
-<figs/all_storms.png, id=438, 1020.4524pt x 516.0078pt>
+<figs/all_storms.png, id=388, 1020.4524pt x 516.0078pt>
 File: figs/all_storms.png Graphic file (type png)
 <use figs/all_storms.png>
-Package pdftex.def Info: figs/all_storms.png  used on input line 153.
-(pdftex.def)             Requested size: 239.60393pt x 130.2378pt.
- [11
+Package pdftex.def Info: figs/all_storms.png  used on input line 148.
+(pdftex.def)             Requested size: 224.26665pt x 130.2378pt.
+ [10
 
- <./figs/all_storms.png>] [12
+ <./figs/all_storms.png>]
+<figs/Reanalysis-Data-Wind-Speed.png, id=418, 751.80875pt x 364.36125pt>
+File: figs/Reanalysis-Data-Wind-Speed.png Graphic file (type png)
+<use figs/Reanalysis-Data-Wind-Speed.png>
+Package pdftex.def Info: figs/Reanalysis-Data-Wind-Speed.png  used on input lin
+e 163.
+(pdftex.def)             Requested size: 224.271pt x 104.18872pt.
+
+[11
+
+ <./figs/Reanalysis-Data-Wind-Speed.png>] [12
 
 ] [13
 
@@ -903,55 +903,38 @@ Package pdftex.def Info: figs/all_storms.png  used on input line 153.
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figs/fusion_network.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fusion_network.pdf, id=521, 963.6pt x 542.025pt>
+<figs/fusion_network.pdf, id=500, 963.6pt x 542.025pt>
 File: figs/fusion_network.pdf Graphic file (type pdf)
 <use figs/fusion_network.pdf>
-Package pdftex.def Info: figs/fusion_network.pdf  used on input line 188.
-(pdftex.def)             Requested size: 273.83728pt x 154.0321pt.
+Package pdftex.def Info: figs/fusion_network.pdf  used on input line 194.
+(pdftex.def)             Requested size: 342.2953pt x 192.54013pt.
 [14
 
  <./figs/fusion_network.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 207.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 207.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 207.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-)
-<figs/wind-cnn.png, id=627, 884.30376pt x 325.215pt>
+<figs/wind-cnn.png, id=604, 884.30376pt x 325.215pt>
 File: figs/wind-cnn.png Graphic file (type png)
 <use figs/wind-cnn.png>
-Package pdftex.def Info: figs/wind-cnn.png  used on input line 207.
+Package pdftex.def Info: figs/wind-cnn.png  used on input line 212.
 (pdftex.def)             Requested size: 273.83728pt x 100.70644pt.
  [15
 
  <./figs/wind-cnn.png>]
-<figs/pressure-cnn.png, id=660, 930.47626pt x 295.1025pt>
+<figs/pressure-cnn.png, id=634, 930.47626pt x 295.1025pt>
 File: figs/pressure-cnn.png Graphic file (type png)
 <use figs/pressure-cnn.png>
-Package pdftex.def Info: figs/pressure-cnn.png  used on input line 229.
+Package pdftex.def Info: figs/pressure-cnn.png  used on input line 234.
 (pdftex.def)             Requested size: 222.48985pt x 70.56036pt.
-<figs/meta-nn.png, id=661, 364.86313pt x 192.72pt>
+<figs/meta-nn.png, id=635, 364.86313pt x 192.72pt>
 File: figs/meta-nn.png Graphic file (type png)
 <use figs/meta-nn.png>
-Package pdftex.def Info: figs/meta-nn.png  used on input line 229.
+Package pdftex.def Info: figs/meta-nn.png  used on input line 234.
 (pdftex.def)             Requested size: 109.537pt x 57.8576pt.
  [16
 
  <./figs/pressure-cnn.png> <./figs/meta-nn.png>]
 File: figs/fusion_network.pdf Graphic file (type pdf)
 <use figs/fusion_network.pdf>
-Package pdftex.def Info: figs/fusion_network.pdf  used on input line 243.
+Package pdftex.def Info: figs/fusion_network.pdf  used on input line 248.
 (pdftex.def)             Requested size: 273.83728pt x 154.0321pt.
  [17
 
@@ -959,119 +942,167 @@ Package pdftex.def Info: figs/fusion_network.pdf  used on input line 243.
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figs/fusion_details.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/fusion_details.pdf, id=716, 963.6pt x 341.35529pt>
+<figs/fusion_details.pdf, id=691, 963.6pt x 341.35529pt>
 File: figs/fusion_details.pdf Graphic file (type pdf)
 <use figs/fusion_details.pdf>
-Package pdftex.def Info: figs/fusion_details.pdf  used on input line 262.
+Package pdftex.def Info: figs/fusion_details.pdf  used on input line 268.
 (pdftex.def)             Requested size: 194.02005pt x 68.7282pt.
 [18
 
- <./figs/fusion_details.pdf>] (./presentation.toc) [19
+ <./figs/fusion_details.pdf>] [19
 
-] [20
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 296.
 
-] [21
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 296.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 296.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) [20
+
+]
+Overfull \hbox (10.89516pt too wide) detected at line 318
+[][]\OT1/mathkerncmss/m/sl/10.95 L\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 ^^R[
+]; ^^R[]\OT1/cmss/m/n/10.95 ) = [] [] [][][]
+ []
+
+[21
 
 ] [22
 
-]
-[23
-
-] (./presentation.toc) [24
+] (./presentation.toc) [23
 
 ]
-<figs/candidates.png, id=1007, 388.45125pt x 365.365pt>
+File: figs/wind-cnn.png Graphic file (type png)
+<use figs/wind-cnn.png>
+Package pdftex.def Info: figs/wind-cnn.png  used on input line 345.
+(pdftex.def)             Requested size: 273.83728pt x 100.70644pt.
+ [24
+
+]
+<figs/candidates.png, id=965, 388.45125pt x 365.365pt>
 File: figs/candidates.png Graphic file (type png)
 <use figs/candidates.png>
-Package pdftex.def Info: figs/candidates.png  used on input line 336.
+Package pdftex.def Info: figs/candidates.png  used on input line 361.
 (pdftex.def)             Requested size: 136.92018pt x 130.23788pt.
  [25
 
  <./figs/candidates.png>] [26
 
-] [27
-
 ]
-<figs/fusion_1.png, id=1090, 959.585pt x 133.49875pt>
-File: figs/fusion_1.png Graphic file (type png)
-<use figs/fusion_1.png>
-Package pdftex.def Info: figs/fusion_1.png  used on input line 394.
-(pdftex.def)             Requested size: 304.3745pt x 42.34564pt.
-<figs/fusion_2.png, id=1091, 858.20625pt x 178.6675pt>
-File: figs/fusion_2.png Graphic file (type png)
-<use figs/fusion_2.png>
-Package pdftex.def Info: figs/fusion_2.png  used on input line 394.
-(pdftex.def)             Requested size: 256.31717pt x 53.36075pt.
- [28
+File: figs/fusion_network.pdf Graphic file (type pdf)
+<use figs/fusion_network.pdf>
+Package pdftex.def Info: figs/fusion_network.pdf  used on input line 396.
+(pdftex.def)             Requested size: 342.2953pt x 192.54013pt.
 
- <./figs/fusion_1.png> <./figs/fusion_2.png>]
-<figs/MAE.pdf, id=1119, 722.7pt x 578.16pt>
-File: figs/MAE.pdf Graphic file (type pdf)
-<use figs/MAE.pdf>
-Package pdftex.def Info: figs/MAE.pdf  used on input line 404.
-(pdftex.def)             Requested size: 256.72147pt x 205.37614pt.
-
-Overfull \vbox (40.80556pt too high) detected at line 404
+Overfull \vbox (6.06955pt too high) detected at line 396
  []
 
-[29
+[27
 
- <./figs/MAE.pdf>] (./presentation.toc) [30
-
-] [31
+] [28
 
 ]
-<figs/ATL_comparison_of_models_errors_per_year.pdf, id=1258, 2168.1pt x 867.24p
+<figs/fusion_1.png, id=1074, 959.585pt x 133.49875pt>
+File: figs/fusion_1.png Graphic file (type png)
+<use figs/fusion_1.png>
+Package pdftex.def Info: figs/fusion_1.png  used on input line 429.
+(pdftex.def)             Requested size: 304.3745pt x 42.34564pt.
+ [29
+
+ <./figs/fusion_1.png>]
+<figs/MAE.PNG, id=1101, 800.9925pt x 523.9575pt>
+File: figs/MAE.PNG Graphic file (type png)
+<use figs/MAE.PNG>
+Package pdftex.def Info: figs/MAE.PNG  used on input line 442.
+(pdftex.def)             Requested size: 232.75829pt x 152.25558pt.
+
+Overfull \vbox (0.72945pt too high) detected at line 442
+ []
+
+[30
+
+ <./figs/MAE.PNG>] (./presentation.toc) [31
+
+] [32
+
+]
+<figs/ATL_comparison_of_models_errors_per_year.pdf, id=1195, 2168.1pt x 867.24p
 t>
 File: figs/ATL_comparison_of_models_errors_per_year.pdf Graphic file (type pdf)
 
 <use figs/ATL_comparison_of_models_errors_per_year.pdf>
 Package pdftex.def Info: figs/ATL_comparison_of_models_errors_per_year.pdf  use
-d on input line 432.
+d on input line 470.
 (pdftex.def)             Requested size: 342.2953pt x 136.90862pt.
- [32
+ [33
 
  <./figs/ATL_comparison_of_models_errors_per_year.pdf>]
-<figs/EPAC_comparison_of_models_errors_per_year.pdf, id=1353, 2168.1pt x 867.24
+<figs/EPAC_comparison_of_models_errors_per_year.pdf, id=1290, 2168.1pt x 867.24
 pt>
 File: figs/EPAC_comparison_of_models_errors_per_year.pdf Graphic file (type pdf
 )
 <use figs/EPAC_comparison_of_models_errors_per_year.pdf>
 Package pdftex.def Info: figs/EPAC_comparison_of_models_errors_per_year.pdf  us
-ed on input line 442.
+ed on input line 480.
 (pdftex.def)             Requested size: 342.2953pt x 136.90862pt.
- [33
-
- <./figs/EPAC_comparison_of_models_errors_per_year.pdf>]
-<figs/compare_with_baseline.png, id=1449, 846.16125pt x 98.3675pt>
-File: figs/compare_with_baseline.png Graphic file (type png)
-<use figs/compare_with_baseline.png>
-Package pdftex.def Info: figs/compare_with_baseline.png  used on input line 455
-.
-(pdftex.def)             Requested size: 342.2953pt x 39.79207pt.
  [34
 
- <./figs/compare_with_baseline.png>]
-<figs/one_stom_result.png, id=1476, 722.7pt x 268.1217pt>
-File: figs/one_stom_result.png Graphic file (type png)
-<use figs/one_stom_result.png>
-Package pdftex.def Info: figs/one_stom_result.png  used on input line 466.
-(pdftex.def)             Requested size: 342.2953pt x 126.99092pt.
+ <./figs/EPAC_comparison_of_models_errors_per_year.pdf>]
+<figs/compare_with_baseline.png, id=1386, 846.16125pt x 98.3675pt>
+File: figs/compare_with_baseline.png Graphic file (type png)
+<use figs/compare_with_baseline.png>
+Package pdftex.def Info: figs/compare_with_baseline.png  used on input line 493
+.
+(pdftex.def)             Requested size: 342.2953pt x 39.79207pt.
  [35
 
- <./figs/one_stom_result.png>] [36
+ <./figs/compare_with_baseline.png>]
+<figs/one_stom_result.png, id=1414, 722.7pt x 268.1217pt>
+File: figs/one_stom_result.png Graphic file (type png)
+<use figs/one_stom_result.png>
+Package pdftex.def Info: figs/one_stom_result.png  used on input line 504.
+(pdftex.def)             Requested size: 342.2953pt x 126.99092pt.
+ [36
 
-] [37
+ <./figs/one_stom_result.png>]
+<figs/6h_track.png, id=1441, 424.58624pt x 480.79625pt>
+File: figs/6h_track.png Graphic file (type png)
+<use figs/6h_track.png>
+Package pdftex.def Info: figs/6h_track.png  used on input line 515.
+(pdftex.def)             Requested size: 136.91344pt x 156.2936pt.
 
-] [38
+Overfull \vbox (6.69176pt too high) detected at line 515
+ []
+
+[37
+
+ <./figs/6h_track.png>] [38
+
+] [39
+
+] [40
 
 ] (./presentation.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39
+ [41
 
- </usr/local/texlive/2018/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>])
-[40]
+ </usr/local/texlive/2018/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42])
+[43]
 \tf@nav=\write6
 \openout6 = `presentation.nav'.
 
@@ -1081,41 +1112,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 503.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 503.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 503.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 503.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 8ECA6845F5CABD6748D2D7EF3001CEE3;1044.
+(rerunfilecheck)             Checksum: 8B3A46860E24C147080626D68EF410F8;846.
  ) 
 Here is how much of TeX's memory you used:
- 17547 strings out of 492649
- 338071 string characters out of 6129622
- 405403 words of memory out of 5000000
- 20894 multiletter control sequences out of 15000+600000
- 17694 words of font info for 64 fonts, out of 8000000 for 9000
+ 17534 strings out of 492649
+ 337933 string characters out of 6129622
+ 403400 words of memory out of 5000000
+ 20883 multiletter control sequences out of 15000+600000
+ 16047 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,63p,779b,725s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,16n,63p,779b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on presentation.pdf (40 pages, 3752707 bytes).
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on presentation.pdf (43 pages, 4105803 bytes).
 PDF statistics:
- 1718 PDF objects out of 1728 (max. 8388607)
- 1321 compressed objects within 14 object streams
- 108 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1707 PDF objects out of 1728 (max. 8388607)
+ 1345 compressed objects within 14 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 
